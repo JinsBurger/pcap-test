@@ -45,12 +45,12 @@ int main(int argc, char* argv[]) {
 
 
 		if(is_ipv4_tcp_packet(packet) == SUCCESS) {
-			printf("IT is ipv4! \n");
+			dump_ipv4_tcp_packet(packet);
 		} else {
-			ERROR_MSG("It is not IPv4-TCP!");
+		//	printf("[!] It is not IPv4-TCP!\n");
 		}
 
-		printf("%u bytes captured\n", header->caplen);
+		//printf("%u bytes captured\n", header->caplen);
 	}
 
 	pcap_close(pcap);
