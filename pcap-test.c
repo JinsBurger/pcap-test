@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
 
 
 		if(is_ipv4_tcp_packet(packet) == SUCCESS) {
-			dump_ipv4_tcp_packet(packet);
+			dump_ipv4_tcp_packet(packet, header->caplen);
 		} else {
 		//	printf("[!] It is not IPv4-TCP!\n");
 		}
